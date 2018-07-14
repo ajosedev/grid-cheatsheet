@@ -31,7 +31,7 @@ export const DefaultGrid = styled.div`
   border-radius: 2px;
   width: 3rem;
   height: 3rem;
-  margin-right: 1rem;
+  margin-right: .6rem;
   flex-shrink: 0;
 
   ${props => style()}

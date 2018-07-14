@@ -7,8 +7,36 @@ import Section from '../components/section';
 import '../index.css';
 
 const Header = styled.h1`
-  font-size: 3rem;
+  h3 {
+    font-size: 3rem;
+  }
 `;
+
+const HeaderLinks = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: .8rem;
+  align-items: center;
+
+  a {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    color: #555;
+    line-height: 2rem;
+    border: 1px solid #555;
+    margin-right: .4rem;
+    border-radius: 4px;
+
+    transition: color 250ms, border-color 250ms;
+
+    &:hover {
+      color: #000;
+      border-color: #000;
+    }
+  }
+`
 
 const Code = styled.code`
   display: block;
@@ -33,7 +61,15 @@ const columnFlow = 'grid-auto-flow: column;';
 const App = () => (
   <ThemeProvider theme={theme}>
     <main>
-      <Header><code>display: grid;</code></Header>
+      <Header>
+        <h3><code>display: grid;</code></h3>
+        <HeaderLinks>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout @ MDN</a>
+          <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid @ W3</a>
+          <a href="https://www.w3.org/TR/css-align-3/">CSS Box Alignment @ W3</a>
+          <a href="https://caniuse.com/#feat=css-grid">Can I Use</a>
+        </HeaderLinks>
+      </Header>
       <Section header="">
         <Property header="grid template">
           <Description>Info about grid-template</Description>
