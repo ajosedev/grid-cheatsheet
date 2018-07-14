@@ -1,15 +1,18 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import styled from "styled-components";
-import { darken } from 'polished';
+import { lighten } from 'polished';
 
-const style = () => {
+const style = (startAtOne = false) => {
   const styles = [];
-  for (let i = 0; i < 9; i++) {
+  const start = startAtOne ? 1 : 0;
+
+  for (let i = start; i < 9; i++) {
     const pos = i + 1;
 
     styles.push(`
-      &:nth-of-type(${10 - pos}) {
-        background-color: ${darken(`${pos / 20}`, 'lightblue')}
+      &:nth-of-type(${pos}) {
+        background-color: ${lighten(pos / 50, '#006fff')}
       }
     `);
   }
@@ -21,11 +24,23 @@ const Item = styled.div`
   border-radius: 2px;
   min-width: .4rem;
   min-height: .4rem;
-  ${style()}
+  background-color: ${props => props.colour};
+  ${props => style(!!props.code)}
+  ${props => props.code};
 `;
 
-const GridItem = () => (
-  <Item />
+const GridItem = ({ code, colour }) => (
+  <Item className="test" code={code} colour={colour} />
 )
+
+GridItem.propTypes = {
+  code: PropTypes.string,
+  colour: PropTypes.string,
+};
+
+GridItem.defaultProps = {
+  code: null,
+  colour: null,
+};
 
 export default GridItem;

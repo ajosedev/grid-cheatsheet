@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import styled from "styled-components";
 import GridItem from './gridItem';
 
-const StyledGrid = styled.div`
+export const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
   grid-gap: .2rem;
   padding: .2rem;
   border: 1px solid black;
