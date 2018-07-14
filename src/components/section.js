@@ -7,6 +7,10 @@ const SectionGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2rem;
   margin-bottom: 4rem;
+
+  @media (max-width: 25rem) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Header = styled.h2`

@@ -19,7 +19,7 @@ const AlternateCode = styled(Code)`
 `;
 
 const Description = styled.p`
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
 `;
 
 const theme = {
@@ -113,7 +113,7 @@ const App = () => (
           <Declaration code={["grid-column: 3"]} styleItem />
         </Property>
         <Property header="grid area">
-          <p>grid-row-start, grid-column-start, grid-row-end, grid-column-end</p>
+          <Description>grid-row-start / grid-column-start / grid-row-end / grid-column-end</Description>
           <Declaration code={["grid-area: 1 / 1 / 3 / 3;"]} styleItem />
           <Declaration code={["grid-area: 1 / 1 / span 2 / span 2;"]} styleItem />
           <Declaration code={["grid-area: 1 / 1 / 3 / 4;"]} styleItem />

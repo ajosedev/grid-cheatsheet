@@ -16,8 +16,11 @@ const Header = styled.h3`
 `;
 
 const Link = styled.a`
-  margin-left: 1rem;
+  margin-left: .6rem;
   text-decoration: none;
+  color: #555;
+  font-size: 1rem;
+  vertical-align: top;
 `;
 
 const Property = ({ children, header, link }) => (
