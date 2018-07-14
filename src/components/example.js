@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 
-import Grid from './grid';
+import Grid from './gridContainer';
 import GridIndividual from './gridIndividual';
 
 const Container = styled.div`

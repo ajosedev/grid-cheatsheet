@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 
-import { StyledGrid } from './grid';
+import { StyledGrid } from './gridContainer';
 import GridItem from './gridItem';
 
 const StyledGridIndividual = styled(StyledGrid)`
