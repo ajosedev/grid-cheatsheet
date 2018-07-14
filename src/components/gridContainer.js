@@ -12,7 +12,7 @@ const style = (colour) => {
 
     styles.push(`
       .grid__item:nth-of-type(${pos}) {
-        background-color: ${lighten(pos / 45, colour)}
+        background-color: ${lighten(pos / 25, colour)}
         // background-color: ${adjustHue(40 * pos, '#BF3F3F')}
       }
     `);

@@ -76,8 +76,8 @@ const App = () => (
         <Property header="grid template">
           <Description>Info about grid-template</Description>
           <Declaration code={["grid-template-columns: 1fr 20px 1fr;", "grid-template-rows: auto auto auto;"]} />
-          <Declaration code={["grid-template-rows: 1fr 20px 1fr;"]} />
-          <Declaration code={["grid-template-columns: 1fr 2fr 2fr;"]} />
+          <Declaration code={["grid-template-columns: repeat(3, auto)", "grid-template-rows: 1fr 20px 1fr;"]} />
+          <Declaration code={["grid-template-columns: 1fr 2fr 2fr;", "grid-template-rows: repeat(3, 30%);"]} />
         </Property>
         <Property header="grid gap">
           <Description>Info about grid-gap. AKA gap</Description>
@@ -161,7 +161,6 @@ const App = () => (
       <Section header="Auto alignment/placement">
         <Property header="grid auto flow">
           <Description>Info about grid-auto-flow</Description>
-          <Code>{twoRows}</Code>
           <Declaration code={["grid-auto-flow: column;"]} />
           <Declaration code={["grid-auto-flow: dense;"]} />
           <Declaration code={["grid-auto-flow: row;"]} isDefault />
