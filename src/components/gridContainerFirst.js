@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 
-import { Grid } from './gridContainer';
+import { DefaultGrid } from './gridContainer';
 import GridItem from './gridItem';
 
-const GridFirst = styled(Grid)`
+const GridFirst = styled(DefaultGrid)`
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
 `;

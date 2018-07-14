@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from "styled-components";
 import GridItem from './gridItem';
 
-export const Grid = styled.div`
+export const DefaultGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
@@ -13,7 +13,9 @@ export const Grid = styled.div`
   border-radius: 2px;
   width: 3rem;
   height: 3rem;
+`;
 
+const StyledGrid = styled(DefaultGrid)`
   ${props => props.code};
 `;
 
@@ -27,9 +29,9 @@ const renderGridItems = () => {
 }
 
 const GridContainer = ({ code }) => (
-  <Grid code={code}>
+  <StyledGrid code={code}>
     {renderGridItems()}
-  </Grid>
+  </StyledGrid>
 )
 
 GridContainer.propTypes = {

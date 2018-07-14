@@ -18,6 +18,13 @@ const App = () => (
   <div>
     <Header>CSS Grid</Header>
     <SectionGrid>
+      <Property header="grid-gap">
+        <p>Info about grid-gap. AKA gap</p>
+        <Declaration code="grid-gap: 10%;" />
+        <Declaration code="grid-gap: 10px;" />
+        <Declaration code="grid-gap: 2px 10px;" />
+        <Declaration code="grid-gap: normal;" isDefault />
+      </Property>
       <Property header="align-content">
         <p>Info about align-content</p>
         <Declaration code="align-content: start;" />
