@@ -19,9 +19,15 @@ const App = () => (
       <Example code="align-content: start;" />
       <Example code="align-content: center;" />
       <Example code="align-content: end;" />
+      <Example code="align-items: start;" />
+      <Example code="align-items: center;" />
+      <Example code="align-items: end;" />
       <Example code="justify-content: start;" />
       <Example code="justify-content: center;" />
       <Example code="justify-content: end;" />
+      <Example code="justify-items: start;" />
+      <Example code="justify-items: center;" />
+      <Example code="justify-items: end;" />
     </AppGrid>
   </div>
 )
