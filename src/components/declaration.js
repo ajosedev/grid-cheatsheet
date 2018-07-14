@@ -13,26 +13,31 @@ const Container = styled.article`
   padding: .5rem;
 `;
 
-const Caption = styled.p`
-  margin-left: 1rem;
+const Code = styled.code`
+  display: inline-block;
 `;
 
-const Declaration = ({ code, isDefault, styleItem, styleOverride }) => (
+const Declaration = ({ children, code, isDefault, styleItem, styleOverride }) => (
   <Container>
     {styleItem ?
       <GridContainerFirst code={code} styleOverride={styleOverride} />
       : <GridContainer code={code} styleOverride={styleOverride} />}
-    <Caption><code>{code}</code> {isDefault && '(default)'}</Caption>
+    <div>
+      <p>{code.map((line, i) => <Code key={i}>{line}</Code>)} {isDefault && '(default)'}</p>
+      {children}
+    </div>
   </Container>
 )
 
 Declaration.propTypes = {
-  code: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  code: PropTypes.array.isRequired,
   isDefault: PropTypes.bool,
   styleItem: PropTypes.bool,
 };
 
 Declaration.defaultProps = {
+  children: null,
   isDefault: false,
   styleItem: false,
 };

@@ -8,6 +8,7 @@ import GridItem from './gridItem';
 const GridFirst = styled(DefaultGrid)`
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
+  ${props => props.styleOverride};
 `;
 
 const renderAdditionalGridItems = () => {
@@ -27,7 +28,7 @@ const GridContainerFirst = ({ code }) => (
 )
 
 GridContainerFirst.propTypes = {
-  code: PropTypes.string.isRequired,
+  code: PropTypes.array.isRequired,
 };
 
 export default GridContainerFirst;

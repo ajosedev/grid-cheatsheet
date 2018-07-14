@@ -35,7 +35,7 @@ const GridItem = ({ code, colour }) => (
 )
 
 GridItem.propTypes = {
-  code: PropTypes.string,
+  code: PropTypes.array,
   colour: PropTypes.string,
 };
 

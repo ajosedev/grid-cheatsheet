@@ -13,6 +13,7 @@ export const DefaultGrid = styled.div`
   border-radius: 2px;
   width: 3rem;
   height: 3rem;
+  margin-right: 1rem;
 `;
 
 const StyledGrid = styled(DefaultGrid)`
@@ -36,7 +37,7 @@ const GridContainer = ({ code, styleOverride }) => (
 )
 
 GridContainer.propTypes = {
-  code: PropTypes.string.isRequired,
+  code: PropTypes.array.isRequired,
   styleOverride: PropTypes.string,
 };
 
