@@ -21,9 +21,9 @@ const twoRows = 'grid-template-rows: repeat(2, auto);';
 const columnFlow = 'grid-auto-flow: column;';
 
 const App = () => (
-  <div>
+  <main>
     <Header><code>display: grid;</code></Header>
-    <Section header="???">
+    <Section header="">
       <Property header="grid template">
         <p>Info about grid-template</p>
         <Declaration code={["grid-template-columns: 1fr 20px 1fr;", "grid-template-rows: auto auto auto;"]} />
@@ -36,32 +36,6 @@ const App = () => (
         <Declaration code={["grid-gap: 10px;"]} />
         <Declaration code={["grid-gap: 2px 10px;"]} />
         <Declaration code={["grid-gap: normal;"]} isDefault />
-      </Property>
-    </Section>
-    <Section header="Auto alignment/placement">
-      <Property header="grid auto flow">
-        <p>Info about grid-auto-flow</p>
-        <Code>{twoRows}</Code>
-        <Declaration code={["grid-auto-flow: column;"]} />
-        <Declaration code={["grid-auto-flow: dense;"]} />
-        <Declaration code={["grid-auto-flow: row;"]} isDefault />
-      </Property>
-      <Property header="grid auto rows">
-        <p>Info about grid-auto-rows</p>
-        <Code>{twoRows}</Code>
-        <Declaration styleOverride={twoRows} code={["grid-auto-rows: 20px;"]} />
-        <Declaration styleOverride={twoRows} code={["grid-auto-rows: min-content;"]} />
-        <Declaration styleOverride={twoRows} code={["grid-auto-rows: 3fr;"]} />
-        <Declaration styleOverride={twoRows} code={["grid-auto-rows: auto;"]} isDefault />
-      </Property>
-      <Property header="grid auto columns">
-        <p>Info about grid-auto-columns</p>
-        <Code>{twoColumns}</Code>
-        <Code>{columnFlow}</Code>
-        <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 20px;"]} />
-        <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: min-content;"]} />
-        <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 3fr;"]} />
-        <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: auto;"]} isDefault />
       </Property>
     </Section>
     <Section header="Container alignment">
@@ -135,7 +109,33 @@ const App = () => (
         <Declaration code={["grid-area: 2 / 2 / 4 / 4;"]} styleItem />
       </Property>
     </Section>
-  </div>
+    <Section header="Auto alignment/placement">
+      <Property header="grid auto flow">
+        <p>Info about grid-auto-flow</p>
+        <Code>{twoRows}</Code>
+        <Declaration code={["grid-auto-flow: column;"]} />
+        <Declaration code={["grid-auto-flow: dense;"]} />
+        <Declaration code={["grid-auto-flow: row;"]} isDefault />
+      </Property>
+      <Property header="grid auto rows">
+        <p>Info about grid-auto-rows</p>
+        <Code>{twoRows}</Code>
+        <Declaration styleOverride={twoRows} code={["grid-auto-rows: 20px;"]} />
+        <Declaration styleOverride={twoRows} code={["grid-auto-rows: min-content;"]} />
+        <Declaration styleOverride={twoRows} code={["grid-auto-rows: 3fr;"]} />
+        <Declaration styleOverride={twoRows} code={["grid-auto-rows: auto;"]} isDefault />
+      </Property>
+      <Property header="grid auto columns">
+        <p>Info about grid-auto-columns</p>
+        <Code>{twoColumns}</Code>
+        <Code>{columnFlow}</Code>
+        <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 20px;"]} />
+        <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: min-content;"]} />
+        <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 3fr;"]} />
+        <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: auto;"]} isDefault />
+      </Property>
+    </Section>
+  </main>
 )
 
 export default App;
