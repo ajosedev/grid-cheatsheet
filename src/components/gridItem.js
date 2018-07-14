@@ -8,8 +8,8 @@ const style = () => {
     const pos = i + 1;
 
     styles.push(`
-      &:nth-of-type(${pos}) {
-        background-color: ${darken(`${pos / 50}`, 'red')}
+      &:nth-of-type(${10 - pos}) {
+        background-color: ${darken(`${pos / 20}`, 'lightblue')}
       }
     `);
   }
@@ -19,6 +19,8 @@ const style = () => {
 
 const Item = styled.div`
   border-radius: 2px;
+  min-width: .4rem;
+  min-height: .4rem;
   ${style()}
 `;
 

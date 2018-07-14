@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import styled from "styled-components";
 import GridItem from './gridItem';
 
@@ -11,6 +12,8 @@ const StyledGrid = styled.div`
   border-radius: 2px;
   width: 3rem;
   height: 3rem;
+
+  ${props => props.code};
 `;
 
 const renderGridItems = () => {
@@ -22,10 +25,14 @@ const renderGridItems = () => {
   return gridItems;
 }
 
-const Grid = () => (
-  <StyledGrid>
+const Grid = ({ code }) => (
+  <StyledGrid code={code}>
     {renderGridItems()}
   </StyledGrid>
 )
+
+Grid.propTypes = {
+  code: PropTypes.string.isRequired,
+};
 
 export default Grid;

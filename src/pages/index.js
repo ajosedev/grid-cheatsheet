@@ -16,9 +16,12 @@ const App = () => (
   <div>
     <Header>CSS Grid</Header>
     <AppGrid>
-      <Example />
-      <Example />
-      <Example />
+      <Example code="align-content: start;" />
+      <Example code="align-content: center;" />
+      <Example code="align-content: end;" />
+      <Example code="justify-content: start;" />
+      <Example code="justify-content: center;" />
+      <Example code="justify-content: end;" />
     </AppGrid>
   </div>
 )
