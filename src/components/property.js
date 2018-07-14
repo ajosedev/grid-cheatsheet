@@ -19,8 +19,13 @@ const Link = styled.a`
   margin-left: .6rem;
   text-decoration: none;
   color: #555;
+  transition: color 250ms;
   font-size: 1rem;
   vertical-align: top;
+
+  &:hover {
+    color: #000;
+  }
 `;
 
 const Property = ({ children, header, link }) => (

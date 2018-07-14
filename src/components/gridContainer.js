@@ -2,6 +2,24 @@ import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 import GridItem from './gridItem';
+import { adjustHue, lighten } from 'polished';
+
+const style = () => {
+  const styles = [];
+
+  for (let i = 1; i < 9; i++) {
+    const pos = i + 1;
+
+    styles.push(`
+      .grid__item:nth-of-type(${pos}) {
+        background-color: ${lighten(pos / 45, '#006fff')}
+        // background-color: ${adjustHue(40 * pos, '#BF3F3F')}
+      }
+    `);
+  }
+
+  return styles;
+}
 
 export const DefaultGrid = styled.div`
   display: grid;
@@ -15,9 +33,15 @@ export const DefaultGrid = styled.div`
   height: 3rem;
   margin-right: 1rem;
   flex-shrink: 0;
+
+  ${props => style()}
 `;
 
 const StyledGrid = styled(DefaultGrid)`
+  .grid__item:nth-of-type(1) {
+    background-color: ${lighten(1 / 45, '#006fff')}
+  }
+
   ${props => props.code};
   ${props => props.styleOverride};
 `;
