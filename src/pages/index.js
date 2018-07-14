@@ -56,7 +56,8 @@ const App = () => (
       </Property>
       <Property header="grid-auto-columns">
         <p>Info about grid-auto-columns</p>
-        <Code>{`${twoColumns + columnFlow}`}</Code>
+        <Code>{twoColumns}</Code>
+        <Code>{columnFlow}</Code>
         <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 20px;"]} />
         <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: min-content;"]} />
         <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 3fr;"]} />
@@ -125,6 +126,13 @@ const App = () => (
         <Declaration code={["grid-column: 1 / span 3;"]} styleItem><AlternateCode>grid-row: span 3;</AlternateCode></Declaration>
         <Declaration code={["grid-column: 1 / 3;"]} styleItem />
         <Declaration code={["grid-column: 3"]} styleItem />
+      </Property>
+      <Property header="grid-area">
+        <p>grid-row-start, grid-column-start, grid-row-end, grid-column-end</p>
+        <Declaration code={["grid-area: 1 / 1 / 3 / 3;"]} styleItem />
+        <Declaration code={["grid-area: 1 / 1 / span 2 / span 2;"]} styleItem />
+        <Declaration code={["grid-area: 1 / 1 / 3 / 4;"]} styleItem />
+        <Declaration code={["grid-area: 2 / 2 / 4 / 4;"]} styleItem />
       </Property>
     </Section>
   </div>
