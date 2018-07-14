@@ -24,13 +24,13 @@ const App = () => (
   <div>
     <Header><code>display: grid;</code></Header>
     <Section header="???">
-      <Property header="grid-template">
+      <Property header="grid template">
         <p>Info about grid-template</p>
         <Declaration code={["grid-template-columns: 1fr 20px 1fr;", "grid-template-rows: auto auto auto;"]} />
         <Declaration code={["grid-template-rows: 1fr 20px 1fr;"]} />
         <Declaration code={["grid-template-columns: 1fr 2fr 2fr;"]} />
       </Property>
-      <Property header="grid-gap">
+      <Property header="grid gap">
         <p>Info about grid-gap. AKA gap</p>
         <Declaration code={["grid-gap: 10%;"]} />
         <Declaration code={["grid-gap: 10px;"]} />
@@ -39,14 +39,14 @@ const App = () => (
       </Property>
     </Section>
     <Section header="Auto alignment/placement">
-      <Property header="grid-auto-flow">
+      <Property header="grid auto flow">
         <p>Info about grid-auto-flow</p>
         <Code>{twoRows}</Code>
         <Declaration code={["grid-auto-flow: column;"]} />
         <Declaration code={["grid-auto-flow: dense;"]} />
         <Declaration code={["grid-auto-flow: row;"]} isDefault />
       </Property>
-      <Property header="grid-auto-rows">
+      <Property header="grid auto rows">
         <p>Info about grid-auto-rows</p>
         <Code>{twoRows}</Code>
         <Declaration styleOverride={twoRows} code={["grid-auto-rows: 20px;"]} />
@@ -54,7 +54,7 @@ const App = () => (
         <Declaration styleOverride={twoRows} code={["grid-auto-rows: 3fr;"]} />
         <Declaration styleOverride={twoRows} code={["grid-auto-rows: auto;"]} isDefault />
       </Property>
-      <Property header="grid-auto-columns">
+      <Property header="grid auto columns">
         <p>Info about grid-auto-columns</p>
         <Code>{twoColumns}</Code>
         <Code>{columnFlow}</Code>
@@ -65,28 +65,28 @@ const App = () => (
       </Property>
     </Section>
     <Section header="Container alignment">
-      <Property header="align-content">
+      <Property header="align content">
         <p>Info about align-content</p>
         <Declaration code={["align-content: start;"]} />
         <Declaration code={["align-content: center;"]} />
         <Declaration code={["align-content: end;"]} />
         <Declaration code={["align-content: normal;"]} isDefault />
       </Property>
-      <Property header="align-items">
+      <Property header="align items">
         <p>Info about align-items</p>
         <Declaration code={["align-items: start;"]} />
         <Declaration code={["align-items: center;"]} />
         <Declaration code={["align-items: end;"]} />
         <Declaration code={["align-items: normal;"]} isDefault />
       </Property>
-      <Property header="justify-content">
+      <Property header="justify content">
         <p>Info about justify-content</p>
         <Declaration code={["justify-content: start;"]} />
         <Declaration code={["justify-content: center;"]} />
         <Declaration code={["justify-content: end;"]} />
         <Declaration code={["justify-content: normal;"]} isDefault />
       </Property>
-      <Property header="justify-items">
+      <Property header="justify items">
         <p>Info about justify-items</p>
         <Declaration code={["justify-items: start;"]} />
         <Declaration code={["justify-items: center;"]} />
@@ -95,14 +95,14 @@ const App = () => (
       </Property>
     </Section>
     <Section header="Item alignment">
-      <Property header="align-self">
+      <Property header="align self">
         <p>Info about align-self</p>
         <Declaration code={["align-self: start;"]} styleItem />
         <Declaration code={["align-self: center;"]} styleItem />
         <Declaration code={["align-self: end;"]} styleItem />
         <Declaration code={["align-self: auto;"]} styleItem isDefault />
       </Property>
-      <Property header="justify-self">
+      <Property header="justify self">
         <p>Info about justify-self</p>
         <Declaration code={["justify-self: start;"]} styleItem />
         <Declaration code={["justify-self: center;"]} styleItem />
@@ -111,7 +111,7 @@ const App = () => (
       </Property>
     </Section>
     <Section header="Item placement">
-      <Property header="grid-row">
+      <Property header="grid row">
         <p>Info about grid-row</p>
         <Declaration code={["grid-row-start: 2;"]} styleItem />
         <Declaration code={["grid-row-end: 2;"]} styleItem />
@@ -119,7 +119,7 @@ const App = () => (
         <Declaration code={["grid-row: 1 / 3;"]} styleItem />
         <Declaration code={["grid-row: 3"]} styleItem />
       </Property>
-      <Property header="grid-column">
+      <Property header="grid column">
         <p>Info about grid-column</p>
         <Declaration code={["grid-column-start: 2;"]} styleItem />
         <Declaration code={["grid-column-end: 2;"]} styleItem />
@@ -127,7 +127,7 @@ const App = () => (
         <Declaration code={["grid-column: 1 / 3;"]} styleItem />
         <Declaration code={["grid-column: 3"]} styleItem />
       </Property>
-      <Property header="grid-area">
+      <Property header="grid area">
         <p>grid-row-start, grid-column-start, grid-row-end, grid-column-end</p>
         <Declaration code={["grid-area: 1 / 1 / 3 / 3;"]} styleItem />
         <Declaration code={["grid-area: 1 / 1 / span 2 / span 2;"]} styleItem />

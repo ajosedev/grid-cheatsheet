@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
+import kebabCase from 'lodash.kebabcase';
 
 const Container = styled.section`
   border: 1px solid black;
@@ -9,11 +10,23 @@ const Container = styled.section`
 const Header = styled.h3`
   font-weight: bold;
   margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
 `;
 
-const Property = ({ children, header }) => (
+const Link = styled.a`
+  margin-left: 1rem;
+  text-decoration: none;
+`;
+
+const Property = ({ children, header, link }) => (
   <Container>
-    <Header>{header}</Header>
+    <Header>
+      {header}
+      <Link href={`https://developer.mozilla.org/en-US/docs/Web/CSS/${link || kebabCase(header)}`}>
+        (MDN)
+      </Link>
+    </Header>
     {children}
   </Container>
 )
@@ -21,6 +34,11 @@ const Property = ({ children, header }) => (
 Property.propTypes = {
   children: PropTypes.node.isRequired,
   header: PropTypes.string.isRequired,
+  link: PropTypes.string,
 };
+
+Property.defaultProps = {
+  link: null,
+}
 
 export default Property;
