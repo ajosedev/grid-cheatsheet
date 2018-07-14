@@ -2,13 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import Property from '../components/property';
 import Declaration from '../components/declaration';
-
-const SectionGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  margin-bottom: 4rem;
-`;
+import Section from '../components/section';
 
 const Header = styled.h1`
   font-size: 3rem;
@@ -16,8 +10,8 @@ const Header = styled.h1`
 
 const App = () => (
   <div>
-    <Header>CSS Grid</Header>
-    <SectionGrid>
+    <Header><code>display: grid;</code></Header>
+    <Section header="???">
       <Property header="grid-gap">
         <p>Info about grid-gap. AKA gap</p>
         <Declaration code="grid-gap: 10%;" />
@@ -25,6 +19,8 @@ const App = () => (
         <Declaration code="grid-gap: 2px 10px;" />
         <Declaration code="grid-gap: normal;" isDefault />
       </Property>
+    </Section>
+    <Section header="Container alignment">
       <Property header="align-content">
         <p>Info about align-content</p>
         <Declaration code="align-content: start;" />
@@ -53,8 +49,8 @@ const App = () => (
         <Declaration code="justify-items: end;" />
         <Declaration code="justify-items: normal;" isDefault />
       </Property>
-    </SectionGrid>
-    <SectionGrid>
+    </Section>
+    <Section header="Item alignment">
       <Property header="align-self">
         <p>Info about align-self</p>
         <Declaration code="align-self: start;" styleItem />
@@ -69,7 +65,7 @@ const App = () => (
         <Declaration code="justify-self: end;" styleItem />
         <Declaration code="justify-self: auto;" styleItem isDefault/>
       </Property>
-    </SectionGrid>
+    </Section>
   </div>
 )
 
