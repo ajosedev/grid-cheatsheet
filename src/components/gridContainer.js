@@ -17,6 +17,7 @@ export const DefaultGrid = styled.div`
 
 const StyledGrid = styled(DefaultGrid)`
   ${props => props.code};
+  ${props => props.styleOverride};
 `;
 
 const renderGridItems = () => {
@@ -28,14 +29,19 @@ const renderGridItems = () => {
   return gridItems;
 }
 
-const GridContainer = ({ code }) => (
-  <StyledGrid code={code}>
+const GridContainer = ({ code, styleOverride }) => (
+  <StyledGrid code={code} styleOverride={styleOverride}>
     {renderGridItems()}
   </StyledGrid>
 )
 
 GridContainer.propTypes = {
   code: PropTypes.string.isRequired,
+  styleOverride: PropTypes.string,
+};
+
+GridContainer.defaultProps = {
+  styleOverride: null,
 };
 
 export default GridContainer;

@@ -17,9 +17,11 @@ const Caption = styled.p`
   margin-left: 1rem;
 `;
 
-const Declaration = ({ code, isDefault, styleItem }) => (
+const Declaration = ({ code, isDefault, styleItem, styleOverride }) => (
   <Container>
-    {styleItem ? <GridContainerFirst code={code} /> : <GridContainer code={code} />}
+    {styleItem ?
+      <GridContainerFirst code={code} styleOverride={styleOverride} />
+      : <GridContainer code={code} styleOverride={styleOverride} />}
     <Caption><code>{code}</code> {isDefault && '(default)'}</Caption>
   </Container>
 )

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
-import { lighten } from 'polished';
+import { adjustHue, lighten } from 'polished';
 
 const style = (startAtOne = false) => {
   const styles = [];
@@ -12,7 +12,8 @@ const style = (startAtOne = false) => {
 
     styles.push(`
       &:nth-of-type(${pos}) {
-        background-color: ${lighten(pos / 50, '#006fff')}
+        background-color: ${lighten(pos / 45, '#006fff')}
+        // background-color: ${adjustHue(40 * pos, '#BF3F3F')}
       }
     `);
   }
@@ -30,7 +31,7 @@ const Item = styled.div`
 `;
 
 const GridItem = ({ code, colour }) => (
-  <Item className="test" code={code} colour={colour} />
+  <Item className="grid__item" code={code} colour={colour} />
 )
 
 GridItem.propTypes = {

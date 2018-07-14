@@ -21,7 +21,7 @@ const renderAdditionalGridItems = () => {
 
 const GridContainerFirst = ({ code }) => (
   <GridFirst>
-    <GridItem code={code} colour="orange" />
+    <GridItem code={code} colour="black" />
     {renderAdditionalGridItems()}
   </GridFirst>
 )
