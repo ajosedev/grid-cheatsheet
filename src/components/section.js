@@ -4,23 +4,24 @@ import styled from "styled-components";
 
 const SectionGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2rem;
   margin-bottom: 4rem;
 `;
 
-const Header = styled.h3`
+const Header = styled.h2`
   font-weight: bold;
   margin-bottom: 2rem;
+  font-size: 2rem;
 `;
 
 const Section = ({ children, header }) => (
-  <div>
+  <section>
     <Header>{header}</Header>
     <SectionGrid>
       {children}
     </SectionGrid>
-  </div>
+  </section>
 )
 
 Section.propTypes = {

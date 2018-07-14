@@ -4,11 +4,12 @@ import styled from "styled-components";
 import kebabCase from 'lodash.kebabcase';
 
 const Container = styled.section`
-  border: 1px solid black;
+  /* border: 1px solid black; */
 `;
 
 const Header = styled.h3`
   font-weight: bold;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
   font-weight: bold;

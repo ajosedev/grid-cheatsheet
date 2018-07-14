@@ -14,6 +14,7 @@ export const DefaultGrid = styled.div`
   width: 3rem;
   height: 3rem;
   margin-right: 1rem;
+  flex-shrink: 0;
 `;
 
 const StyledGrid = styled(DefaultGrid)`

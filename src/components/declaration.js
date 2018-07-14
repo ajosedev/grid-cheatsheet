@@ -8,9 +8,12 @@ import GridContainerFirst from './gridContainerFirst';
 const Container = styled.article`
   display: flex;
   align-items: center;
-  border: 1px solid black;
   border-radius: 2px;
-  padding: .5rem;
+  padding: .5rem 0;
+
+  &:first-of-type {
+    margin-top: 1rem;
+  }
 `;
 
 const Code = styled.code`
