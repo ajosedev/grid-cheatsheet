@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';
 import styled from "styled-components";
 
-import { StyledGrid } from './gridContainer';
+import { Grid } from './gridContainer';
 import GridItem from './gridItem';
 
-const StyledGridIndividual = styled(StyledGrid)`
+const GridFirst = styled(Grid)`
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 2fr 1fr 1fr;
 `;
@@ -19,15 +19,15 @@ const renderAdditionalGridItems = () => {
   return additionalGridItems;
 }
 
-const GridIndividual = ({ code }) => (
-  <StyledGridIndividual>
+const GridContainerFirst = ({ code }) => (
+  <GridFirst>
     <GridItem code={code} colour="orange" />
     {renderAdditionalGridItems()}
-  </StyledGridIndividual>
+  </GridFirst>
 )
 
-GridIndividual.propTypes = {
+GridContainerFirst.propTypes = {
   code: PropTypes.string.isRequired,
 };
 
-export default GridIndividual;
+export default GridContainerFirst;
