@@ -4,7 +4,7 @@ import styled from "styled-components";
 import GridItem from './gridItem';
 import { adjustHue, lighten } from 'polished';
 
-const style = () => {
+const style = (colour) => {
   const styles = [];
 
   for (let i = 1; i < 9; i++) {
@@ -12,7 +12,7 @@ const style = () => {
 
     styles.push(`
       .grid__item:nth-of-type(${pos}) {
-        background-color: ${lighten(pos / 45, '#006fff')}
+        background-color: ${lighten(pos / 45, colour)}
         // background-color: ${adjustHue(40 * pos, '#BF3F3F')}
       }
     `);
@@ -27,14 +27,14 @@ export const DefaultGrid = styled.div`
   grid-template-rows: repeat(3, auto);
   grid-gap: .2rem;
   padding: .2rem;
-  border: 1px solid black;
+  border: 1px solid #aaa;
   border-radius: 2px;
   width: 3rem;
   height: 3rem;
   margin-right: .6rem;
   flex-shrink: 0;
 
-  ${props => style()}
+  ${props => style(props.theme.blue)}
 `;
 
 const StyledGrid = styled(DefaultGrid)`

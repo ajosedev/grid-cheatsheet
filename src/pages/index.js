@@ -23,11 +23,12 @@ const HeaderLinks = styled.div`
     justify-content: center;
     padding: 0 0.5rem;
     text-decoration: none;
-    color: #555;
+    color: ${props => props.theme.blue};
     line-height: 2rem;
-    border: 1px solid #555;
+    border: 1px solid ${props => props.theme.blue};
     margin-right: .4rem;
     border-radius: 4px;
+    font-weight: 600;
 
     transition: color 250ms, border-color 250ms;
 
@@ -51,7 +52,8 @@ const Description = styled.p`
 `;
 
 const theme = {
-  header: 'red',
+  blue: '#006fff',
+  darkBlue: '#004aaa',
 };
 
 const twoColumns = 'grid-template-columns: repeat(2, auto);';

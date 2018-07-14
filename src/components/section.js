@@ -17,6 +17,8 @@ const Header = styled.h2`
   font-weight: bold;
   margin-bottom: 2rem;
   font-size: 2rem;
+  text-transform: uppercase;
+  color: ${props => props.theme.darkBlue};
 `;
 
 const Section = ({ children, header }) => (

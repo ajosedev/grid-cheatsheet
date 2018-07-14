@@ -17,7 +17,7 @@ const Header = styled.h3`
 const Link = styled.a`
   margin-left: .6rem;
   text-decoration: none;
-  color: #555;
+  color: ${props => props.theme.blue};
   transition: color 250ms;
   font-size: 1rem;
   vertical-align: top;

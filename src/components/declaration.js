@@ -18,6 +18,7 @@ const Container = styled.article`
 
 const Code = styled.code`
   display: inline-block;
+  line-height: 1rem;
 `;
 
 const Declaration = ({ children, code, isDefault, styleItem, styleOverride }) => (
