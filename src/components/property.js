@@ -32,7 +32,7 @@ const Property = ({ children, header, link }) => (
     <Header>
       {header}
       <Link href={`https://developer.mozilla.org/en-US/docs/Web/CSS/${link || kebabCase(header)}`}>
-        (MDN)
+        MDN
       </Link>
     </Header>
     {children}

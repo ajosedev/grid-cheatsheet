@@ -7,9 +7,10 @@ import Section from '../components/section';
 import '../index.css';
 
 const Header = styled.h1`
-  h3 {
-    font-size: 3rem;
-  }
+  font-size: 3rem;
+  font-weight: bold;
+  color: ${props => props.theme.one};
+  font-family: monospace;
 `;
 
 const HeaderLinks = styled.div`
@@ -23,9 +24,9 @@ const HeaderLinks = styled.div`
     justify-content: center;
     padding: 0 0.5rem;
     text-decoration: none;
-    color: ${props => props.theme.blue};
+    color: ${props => props.theme.four};
     line-height: 2rem;
-    border: 1px solid ${props => props.theme.blue};
+    border: 1px solid ${props => props.theme.four};
     margin-right: .4rem;
     border-radius: 4px;
     font-weight: 600;
@@ -33,8 +34,8 @@ const HeaderLinks = styled.div`
     transition: color 250ms, border-color 250ms;
 
     &:hover {
-      color: #000;
-      border-color: #000;
+      color: ${props => props.theme.five};
+      border-color: ${props => props.theme.five};
     }
   }
 `
@@ -54,6 +55,11 @@ const Description = styled.p`
 const theme = {
   blue: '#006fff',
   darkBlue: '#004aaa',
+  one: '#5D001E',
+  two: '#E3E2DF',
+  three: '#E3AFBC',
+  four: '#9A1750',
+  five: '#EE4C7C',
 };
 
 const twoColumns = 'grid-template-columns: repeat(2, auto);';
@@ -63,15 +69,15 @@ const columnFlow = 'grid-auto-flow: column;';
 const App = () => (
   <ThemeProvider theme={theme}>
     <main>
-      <Header>
-        <h3><code>display: grid;</code></h3>
+      <header>
+        <Header>display: grid;</Header>
         <HeaderLinks>
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout @ MDN</a>
           <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid @ W3</a>
           <a href="https://www.w3.org/TR/css-align-3/">CSS Box Alignment @ W3</a>
           <a href="https://caniuse.com/#feat=css-grid">Can I Use</a>
         </HeaderLinks>
-      </Header>
+      </header>
       <Section header="">
         <Property header="grid template">
           <Description>Info about grid-template</Description>
@@ -87,7 +93,7 @@ const App = () => (
           <Declaration code={["grid-gap: normal;"]} isDefault />
         </Property>
       </Section>
-      <Section header="Container alignment">
+      <Section header="Container alignment" id="container-align">
         <Property header="align content">
           <Description>Info about align-content</Description>
           <Declaration code={["align-content: start;"]} />
@@ -117,7 +123,7 @@ const App = () => (
           <Declaration code={["justify-items: normal;"]} isDefault />
         </Property>
       </Section>
-      <Section header="Item alignment">
+      <Section header="Item alignment" id="item-align">
         <Property header="align self">
           <Description>Info about align-self</Description>
           <Declaration code={["align-self: start;"]} styleItem />
@@ -133,7 +139,7 @@ const App = () => (
           <Declaration code={["justify-self: auto;"]} styleItem isDefault/>
         </Property>
       </Section>
-      <Section header="Item placement">
+      <Section header="Item placement" id="item-place">
         <Property header="grid row">
           <Description>Info about grid-row</Description>
           <Declaration code={["grid-row-start: 2;"]} styleItem />
@@ -158,7 +164,7 @@ const App = () => (
           <Declaration code={["grid-area: 2 / 2 / 4 / 4;"]} styleItem />
         </Property>
       </Section>
-      <Section header="Auto alignment/placement">
+      <Section header="Auto alignment/placement" id="auto-align">
         <Property header="grid auto flow">
           <Description>Info about grid-auto-flow</Description>
           <Declaration code={["grid-auto-flow: column;"]} />
