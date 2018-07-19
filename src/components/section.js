@@ -9,7 +9,7 @@ const StyledSection = styled.section`
 const SectionGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1.2rem;
+  grid-gap: 2.2rem 1.2rem;
 
   @media (max-width: 25rem) {
     grid-template-columns: 1fr;

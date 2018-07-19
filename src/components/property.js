@@ -9,7 +9,7 @@ const Container = styled.section`
 const Header = styled.h3`
   font-weight: bold;
   font-size: 1.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   font-weight: bold;
 `;
@@ -17,13 +17,13 @@ const Header = styled.h3`
 const Link = styled.a`
   margin-left: .6rem;
   text-decoration: none;
-  color: ${props => props.theme.blue};
+  color: ${props => props.theme.five};
   transition: color 250ms;
   font-size: 1rem;
   vertical-align: top;
 
   &:hover {
-    color: #000;
+    color: ${props => props.theme.one};
   }
 `;
 

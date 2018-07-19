@@ -34,12 +34,12 @@ export const DefaultGrid = styled.div`
   margin-right: .6rem;
   flex-shrink: 0;
 
-  ${props => style(props.theme.blue)}
+  ${props => style(props.theme.one)}
 `;
 
 const StyledGrid = styled(DefaultGrid)`
   .grid__item:nth-of-type(1) {
-    background-color: ${lighten(1 / 45, '#006fff')}
+    background-color: ${props => lighten(1 / 45, props.theme.one)}
   }
 
   ${props => props.code};
