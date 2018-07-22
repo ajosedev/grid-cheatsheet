@@ -9,7 +9,7 @@ const Container = styled.article`
   display: flex;
   align-items: center;
   border-radius: 2px;
-  padding: .5rem 0;
+  padding: .1rem 0;
 
   &:first-of-type {
     margin-top: 1rem;
@@ -27,7 +27,7 @@ const Declaration = ({ children, code, isDefault, styleItem, styleOverride }) =>
       <GridContainerFirst code={code} styleOverride={styleOverride} />
       : <GridContainer code={code} styleOverride={styleOverride} />}
     <div>
-      <p>{code.map((line, i) => <Code key={i}>{line}</Code>)} {isDefault && '(default)'}</p>
+      <p>{code.map((line, i) => <Code key={i}>{line}</Code>)}</p>
       {children}
     </div>
   </Container>
@@ -36,13 +36,11 @@ const Declaration = ({ children, code, isDefault, styleItem, styleOverride }) =>
 Declaration.propTypes = {
   children: PropTypes.node,
   code: PropTypes.array.isRequired,
-  isDefault: PropTypes.bool,
   styleItem: PropTypes.bool,
 };
 
 Declaration.defaultProps = {
   children: null,
-  isDefault: false,
   styleItem: false,
 };
 
