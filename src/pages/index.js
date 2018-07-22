@@ -1,8 +1,9 @@
 import React from "react";
 import styled, { ThemeProvider } from 'styled-components';
+import Declaration from '../components/declaration';
+import Description from '../components/description';
 import Header from '../components/header';
 import Property from '../components/property';
-import Declaration from '../components/declaration';
 import Section from '../components/section';
 
 import '../index.css';
@@ -15,9 +16,9 @@ const AlternateCode = styled(Code)`
   font-style: italic;
 `;
 
-const Description = styled.p`
-  margin-bottom: 1rem;
-`;
+// const Description = styled.p`
+//   margin-bottom: 1rem;
+// `;
 
 const theme = {
   blue: '#006fff',
@@ -132,7 +133,7 @@ const App = () => (
         </Property>
         <Property header="grid auto rows">
           <Description>Info about grid-auto-rows</Description>
-          <Code>{twoRows}</Code>
+          {/* <Code>{twoRows}</Code> */}
           <Declaration styleOverride={twoRows} code={["grid-auto-rows: 20px;"]} />
           <Declaration styleOverride={twoRows} code={["grid-auto-rows: min-content;"]} />
           <Declaration styleOverride={twoRows} code={["grid-auto-rows: 3fr;"]} />
@@ -140,8 +141,8 @@ const App = () => (
         </Property>
         <Property header="grid auto columns">
           <Description>Info about grid-auto-columns</Description>
-          <Code>{twoColumns}</Code>
-          <Code>{columnFlow}</Code>
+          {/* <Code>{twoColumns}</Code>
+          <Code>{columnFlow}</Code> */}
           <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 20px;"]} />
           <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: min-content;"]} />
           <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 3fr;"]} />
