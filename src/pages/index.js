@@ -112,20 +112,17 @@ const App = () => (
       <Section header="Auto alignment/placement" id="auto-align">
         <Property header="grid auto flow">
           <Description>Info about grid-auto-flow</Description>
-          <Declaration code={["grid-auto-flow: column;"]} />
           <Declaration code={["grid-auto-flow: row;"]} />
           <Declaration code={["grid-auto-flow: dense;"]} />
         </Property>
         <Property header="grid auto rows">
           <Description>Info about grid-auto-rows</Description>
           <Declaration styleOverride={twoRows} code={["grid-auto-rows: 20px;"]} />
-          <Declaration styleOverride={twoRows} code={["grid-auto-rows: min-content;"]} />
           <Declaration styleOverride={twoRows} code={["grid-auto-rows: 3fr;"]} />
         </Property>
         <Property header="grid auto columns">
           <Description>Info about grid-auto-columns</Description>
           <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 20px;"]} />
-          <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: min-content;"]} />
           <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 3fr;"]} />
         </Property>
       </Section>
