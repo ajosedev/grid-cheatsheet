@@ -55,18 +55,19 @@ const renderGridItems = () => {
   return gridItems;
 }
 
-const GridContainer = ({ code, styleOverride }) => (
-  <StyledGrid code={code} styleOverride={styleOverride}>
+const GridContainer = ({ className, code, styleOverride }) => (
+  <StyledGrid className={className} code={code} styleOverride={styleOverride}>
     {renderGridItems()}
   </StyledGrid>
 )
 
 GridContainer.propTypes = {
-  code: PropTypes.array.isRequired,
+  code: PropTypes.array,
   styleOverride: PropTypes.string,
 };
 
 GridContainer.defaultProps = {
+  code: null,
   styleOverride: null,
 };
 
