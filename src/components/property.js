@@ -9,7 +9,7 @@ const Container = styled.section`
 const Header = styled.h3`
   font-weight: bold;
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   text-transform: uppercase;
   font-weight: bold;
 `;

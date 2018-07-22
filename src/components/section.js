@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from "styled-components";
 
 const StyledSection = styled.section`
-  margin: 3rem 0 2rem;
+  margin: 2rem 0;
 `;
 
 const SectionGrid = styled.div`
@@ -18,7 +18,7 @@ const SectionGrid = styled.div`
 
 const Header = styled.h2`
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
   display: inline-block;
