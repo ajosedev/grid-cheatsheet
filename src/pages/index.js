@@ -140,7 +140,7 @@ const App = () => (
           <Description
             signature="grid-auto-flow: [ row | column ] || dense"
           >
-            <p>Defines auto placement for grid items that aren't explicitly placed</p>
+            <p>Defines auto placement for grid items that aren&apos;t explicitly placed</p>
           </Description>
           <Declaration code={["grid-auto-flow: row;"]} />
           <Declaration code={["grid-auto-flow: dense;"]} />
