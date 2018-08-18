@@ -8,8 +8,9 @@ import GridContainerFirst from './gridContainerFirst';
 const Container = styled.article`
   display: flex;
   align-items: center;
-  border-radius: 2px;
-  padding: .1rem 0;
+  padding: .1rem 0 .1rem .5rem;
+  background-color: #eee;
+  border-left: 2px solid ${props => props.theme.one};
 
   &:first-of-type {
     margin-top: 1rem;

@@ -42,8 +42,6 @@ const FooterLinks = styled.div`
 `;
 
 const theme = {
-  blue: '#006fff',
-  darkBlue: '#004aaa',
   one: '#5D001E',
   two: '#E3E2DF',
   three: '#E3AFBC',

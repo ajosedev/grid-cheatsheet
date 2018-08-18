@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Div = styled.div`
+  p {
+    line-height: 1.2rem;
+  }
+  b {
+    font-weight: 600;
+  }
+  code {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: ${props => props.theme.one};
+  }
+`;
 
 const Description = props => (
-  <div>
+  <Div>
     {props.children}
     {props.signature && <code>{props.signature}</code>}
-    {props.default && <p>Default: {props.default}</p>}
-  </div>
+  </Div>
 );
 
 Description.propTypes = {
