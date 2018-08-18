@@ -61,20 +61,17 @@ const App = () => (
       <Header />
       <Section header="">
         <Property header="grid template">
-          <Description
-            info="Defines the track size"
-          >
-            <p>Defines the track size</p>
+          <Description>
+            <p>Defines the explicit track sizes of the grid</p>
           </Description>
           <Declaration code={["grid-template-columns: 1fr 20px 1fr;"]} />
           <Declaration code={["grid-template-rows: 1fr repeat(2, 2fr);"]} />
         </Property>
-        <Property header="gap">
+        <Property header="grid gap">
           <Description
-            signature="gap: <row-gap> <column-gap>?"
+            signature="grid-gap: <row-gap> <column-gap>?"
           >
             <p>Defines gutter size between grid items</p>
-            <p>Previously known as 'grid-gap'</p>
           </Description>
           <Declaration code={["grid-gap: 20%;"]} />
           <Declaration code={["grid-gap: 1px 5px;"]} />
@@ -85,8 +82,7 @@ const App = () => (
           <Description
             signature="place-content: <align-content> <justify-content>?"
           >
-          {/* TODO - grid this up */}
-            <p>Controls alignment of the box's content within its content box</p>
+            <p>Aligns/justifies the grid itself (when the grid is smaller than its container)</p>
           </Description>
           <Declaration code={["place-content: start end;"]} />
           <Declaration code={["place-content: center;"]} />
@@ -96,8 +92,7 @@ const App = () => (
           <Description
             signature="place-items: <align-items> <justify-items>?"
           >
-                    {/* TODO - grid this up */}
-            <p>Sets the default 'align-self' and 'justify-self' of the element's child boxes</p>
+            <p>Defines the default <b>align-self</b> and <b>justify-self</b> of grid items within their grid tracks</p>
           </Description>
           <Declaration code={["place-items: start end;"]} />
           <Declaration code={["place-items: center;"]} />
@@ -109,8 +104,7 @@ const App = () => (
         <Description
           signature="place-self: <align-self> <justify-self>?"
         >
-          {/* TODO - grid this up */}
-          <p>Controls the alignment of the box within its containing block</p>
+          <p>Aligns/justifies the grid item within its grid track</p>
         </Description>
           <Declaration code={["place-self: start end;"]} styleItem />
           <Declaration code={["place-self: center;"]} styleItem />
@@ -119,13 +113,17 @@ const App = () => (
       </Section>
       <Section header="Item placement" id="item-place">
         <Property header="grid row">
-          <Description>Info about grid-row</Description>
+          <Description
+            signature="grid-row: <grid-row-start> [/ <grid-row-end>]?"
+          />
           <Declaration code={["grid-row: 1 / 3;"]} styleItem />
           <Declaration code={["grid-row: 1 / span 3;"]} styleItem><AlternateCode>grid-row: span 3;</AlternateCode></Declaration>
           <Declaration code={["grid-row-start: 2; grid-row-end: 3;"]} styleItem />
         </Property>
         <Property header="grid column">
-          <Description>Info about grid-column</Description>
+          <Description
+            signature="grid-column: <grid-column-start> [/ <grid-column-end>]?"
+          />
           <Declaration code={["grid-column: 1 / 3;"]} styleItem />
           <Declaration code={["grid-column: 1 / span 3;"]} styleItem><AlternateCode>grid-column: span 3;</AlternateCode></Declaration>
           <Declaration code={["grid-column-start: 2; grid-column-end: 3;"]} styleItem />
@@ -134,7 +132,6 @@ const App = () => (
           <Description
             signature="grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end"
           >
-            <p>Shorthand for setting grid-row and grid-column</p>
           </Description>
           <Declaration code={["grid-area: 1 / 1 / 3 / 3;"]} styleItem />
           <Declaration code={["grid-area: 2 / 2 / span 2 / span 2;"]} styleItem />
@@ -142,17 +139,29 @@ const App = () => (
       </Section>
       <Section header="Auto alignment/placement" id="auto-align">
         <Property header="grid auto flow">
-          <Description>Info about grid-auto-flow</Description>
+          <Description
+            signature="grid-auto-flow: [ row | column ] || dense"
+          >
+            <p>Defines auto placement for grid items that aren't explicitly placed</p>
+          </Description>
           <Declaration code={["grid-auto-flow: row;"]} />
           <Declaration code={["grid-auto-flow: dense;"]} />
         </Property>
         <Property header="grid auto rows">
-          <Description>Info about grid-auto-rows</Description>
+          <Description
+            signature="grid-auto-rows: <track-size>+"
+          >
+            <p>Defines size of implicit grid tracks</p>
+          </Description>
           <Declaration styleOverride={twoRows} code={["grid-auto-rows: 20px;"]} />
           <Declaration styleOverride={twoRows} code={["grid-auto-rows: 3fr;"]} />
         </Property>
         <Property header="grid auto columns">
-          <Description>Info about grid-auto-columns</Description>
+          <Description
+            signature="grid-auto-rows: <track-size>+"
+          >
+            <p>Defines size of implicit grid tracks</p>
+          </Description>
           <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 20px;"]} />
           <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 3fr;"]} />
         </Property>
