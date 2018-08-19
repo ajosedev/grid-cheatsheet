@@ -135,7 +135,7 @@ const App = () => (
           <Declaration code={["grid-area: 2 / 2 / span 2 / span 2;"]} styleItem />
         </Property>
       </Section>
-      <Section header="Auto alignment/placement" id="auto-align">
+      <Section header="Auto alignment / placement" id="auto-align">
         <Property header="grid auto flow">
           <Description
             signature="grid-auto-flow: [ row | column ] || dense"
