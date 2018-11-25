@@ -21,8 +21,8 @@ const Header = () => (
     {/* TODO - style this */}
     <HeaderText>display: grid;</HeaderText>
     <InlineGridContainer />
-    <p><strong>Align</strong> = cross axis</p>
-    <p><strong>Justify</strong> = main axis</p>
+    <p><strong>Align</strong> = block axis</p>
+    <p><strong>Justify</strong> = inline/row axis</p>
     <p>Rows <sub>x</sub> columns for shorthand declarations</p>
   </header>
 );
