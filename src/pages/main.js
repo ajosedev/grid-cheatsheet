@@ -13,31 +13,6 @@ const AlternateCode = styled(Code)`
   font-style: italic;
 `;
 
-const FooterLinks = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: .8rem;
-  align-items: center;
-
-  a {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: ${props => props.theme.four};
-    line-height: 2rem;
-    margin-right: .5rem;
-    font-weight: 600;
-    border-bottom: 1px solid ${props => props.theme.four};;
-
-    transition: color 250ms, border-color 250ms;
-
-    &:hover {
-      color: ${props => props.theme.five};
-      border-color: ${props => props.theme.five};
-    }
-  }
-`;
-
 const twoColumns = 'grid-template-columns: repeat(2, auto);';
 const twoRows = 'grid-template-rows: repeat(2, auto);';
 const columnFlow = 'grid-auto-flow: column;';
@@ -151,12 +126,6 @@ const Main = () => (
         <Declaration styleOverride={`${twoColumns + columnFlow}`} code={["grid-auto-columns: 1fr;"]} />
       </Property>
     </Section>
-    <FooterLinks>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid @ MDN</a>
-      <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid @ W3</a>
-      <a href="https://www.w3.org/TR/css-align-3/">CSS Box Alignment @ W3</a>
-      <a href="https://caniuse.com/#feat=css-grid">Can I Use</a>
-    </FooterLinks>
   </main>
 )
 
