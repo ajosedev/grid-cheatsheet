@@ -18,7 +18,6 @@ const InlineGridContainer = styled(GridContainer)`
 
 const Header = () => (
   <header>
-    {/* TODO - style this */}
     <HeaderText>display: grid;</HeaderText>
     <InlineGridContainer />
     <p><strong>Align</strong> = block axis</p>
