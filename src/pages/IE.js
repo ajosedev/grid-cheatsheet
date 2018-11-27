@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { lighten } from 'polished';
+import { Header } from '../components/section';
 
 const Table = styled.table`
   margin-top: 1rem;
@@ -19,6 +20,7 @@ const Table = styled.table`
 
 const IE = () => (
   <main>
+    <Header>IE10/IE11</Header>
     <p>The specs have more changes than are listed here, e.g. changes to values and syntax.</p>
     <p>IE10/IE11 requires explicit placement of all items, there is no auto placement (and also no <code>auto</code>-related declarations)</p>
     <Table>
