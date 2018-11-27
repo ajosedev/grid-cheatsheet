@@ -55,8 +55,11 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-main {
+body {
 	padding: 1rem;
+}
+main {
+	margin-top: 1rem;
 }
 code {
 	font-family: monospace;
