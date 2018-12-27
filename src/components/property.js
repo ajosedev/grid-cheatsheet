@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import styled from "styled-components";
 import kebabCase from 'lodash.kebabcase';
 
-const Container = styled.section`
-`;
-
 const Header = styled.h3`
   font-weight: bold;
   font-size: 1.4rem;
@@ -28,7 +25,7 @@ const Link = styled.a`
 `;
 
 const Property = ({ children, header, link }) => (
-  <Container>
+  <section>
     <Header>
       {header}
       <Link href={`https://developer.mozilla.org/en-US/docs/Web/CSS/${link || kebabCase(header)}`}>
@@ -36,7 +33,7 @@ const Property = ({ children, header, link }) => (
       </Link>
     </Header>
     {children}
-  </Container>
+  </section>
 )
 
 Property.propTypes = {

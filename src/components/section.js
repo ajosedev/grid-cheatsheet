@@ -16,7 +16,7 @@ const SectionGrid = styled.div`
   }
 `;
 
-const Header = styled.h2`
+export const Header = styled.h2`
   font-weight: bold;
   margin-bottom: 1rem;
   font-size: 2rem;
