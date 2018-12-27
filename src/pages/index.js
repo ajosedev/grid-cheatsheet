@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Declaration from '../components/declaration';
 import Description from '../components/description';
 import Header from '../components/header';
@@ -56,6 +57,12 @@ const columnFlow = 'grid-auto-flow: column;';
 const App = () => (
   <ThemeProvider theme={theme}>
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <html lang="en" />
+        <title>CSS Grid</title>
+        <meta name="description" content="A visual guide for helping you remember CSS Grid" />
+      </Helmet>
       <Header />
       <Section header="">
         <Property header="grid template">
