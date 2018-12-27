@@ -1,7 +1,6 @@
 import React from "react";
-import styled from 'styled-components';
-import { ThemeProvider } from 'styled-components';
-
+import styled, { ThemeProvider } from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Header from '../components/header';
 import Main from './main';
 import IE from './IE';
@@ -45,6 +44,12 @@ const FooterLinks = styled.div`
 const App = () => (
   <ThemeProvider theme={theme}>
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <html lang="en" />
+        <title>CSS Grid</title>
+        <meta name="description" content="A visual guide for helping you remember CSS Grid" />
+      </Helmet>
       <Header />
       <Main />
       <IE />
