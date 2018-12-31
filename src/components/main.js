@@ -1,9 +1,9 @@
 import React from "react";
 import styled from 'styled-components';
-import Declaration from '../components/declaration';
-import Description from '../components/description';
-import Property from '../components/property';
-import Section from '../components/section';
+import Declaration from './declaration';
+import Description from './description';
+import Property from './property';
+import Section from './section';
 
 const Code = styled.code`
   display: block;

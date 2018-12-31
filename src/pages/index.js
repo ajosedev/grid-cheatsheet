@@ -2,8 +2,8 @@ import React from "react";
 import styled, { ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Header from '../components/header';
-import Main from './main';
-import IE from './IE';
+import Main from '../components/main';
+import IE from '../components/IE';
 
 import '../index.css';
 

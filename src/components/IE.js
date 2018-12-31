@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { lighten } from 'polished';
-import { Header } from '../components/section';
+import { Header } from './section';
 
 const Table = styled.table`
   margin-top: 1rem;
